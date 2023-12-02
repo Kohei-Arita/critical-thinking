@@ -91,8 +91,7 @@ Foodboxが事業を成功させるためにはどうすればいいか？
 ・大企業
 
 #ユーザーの入力:
-    """ 
-    + user_input
+ """ + user_input
 
     response = openai.ChatCompletion.create(
         model=st.session_state["openai_model"],
