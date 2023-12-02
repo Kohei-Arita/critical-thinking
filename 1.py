@@ -5,7 +5,7 @@ import os
 # 環境変数からAPIキーを取得
 # APIキーの設定
 # APIキーを環境変数から取得
-api_key = os.environ.get("API_KEY")
+api_key = os.environ.get("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")
 openai.api_key = api_key
 
 
