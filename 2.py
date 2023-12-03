@@ -1,8 +1,10 @@
 import streamlit as st
+import os
 from openai import OpenAI
 
-# 環境変数からAPIキーを取得し、OpenAIクライアントを初期化
-client = OpenAI(api_key=st.secrets["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"])
+# 環境変数からAPIキーを取得
+client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
+
 
 # Streamlitアプリの設定
 st.title('AIクリティカルシンキングアシスタント')
