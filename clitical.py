@@ -4,7 +4,7 @@ import os
 
 # 環境変数からAPIキーを取得
 # APIキーの設定
-API_KEY = "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"
+API_KEY = "api"
 openai.api_key = API_KEY
 
 # Streamlitアプリの設定
