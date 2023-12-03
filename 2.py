@@ -94,12 +94,11 @@ Foodboxが事業を成功させるためにはどうすればいいか？
  """ + user_input
 
     response = openai.ChatCompletion.create(
-        model=st.session_state["openai_model"],
-        messages=[
-            {"role": "system", "content": prompt},
-            {"role": "user", "content": user_input}
-        ]
+    model=st.session_state["openai_model"],  # Specify the model here
+    messages=[{"role": "system", "content": prompt}],  # Format the prompt as a message
+    max_tokens=5000
     )
+
 
     # APIからのレスポンスを表示
     if response.choices:
