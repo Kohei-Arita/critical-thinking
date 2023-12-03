@@ -3,11 +3,13 @@ import openai
 import os
 
 # 環境変数からAPIキーを取得
-# APIキーの設定
-# APIキーを環境変数から取得
-api_key = os.environ.get("API_KEY")
-openai.api_key = api_key
 
+# 環境変数からAPIキーを取得
+api_key = os.getenv('OPENAI_API_KEY')
+if not api_key:
+    raise ValueError("APIキーが設定されていません。")
+
+openai.api_key = api_key
 
 # Streamlitアプリの設定
 st.title('AIクリティカルシンキングアシスタント')
@@ -114,3 +116,4 @@ Foodboxが事業を成功させるためにはどうすればいいか？
 if st.button('チャット履歴をクリア'):
     st.session_state.messages = [] # メッセージのリセット
     st.experimental_rerun() # 画面を更新
+
