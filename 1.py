@@ -14,6 +14,8 @@ openai.api_key = api_key
 # Streamlitアプリの設定
 st.title('AIクリティカルシンキングアシスタント')
 
+st.write('セントラルクエスチョンとは"市場、競合の観点から見てA社はジェネリック市場に参入すべきか？"といった、答えを出すべき問いのことです。')
+
 # セッション内で使用するモデルが指定されていない場合のデフォルト値
 if "openai_model" not in st.session_state:
     st.session_state["openai_model"] = "gpt-4"

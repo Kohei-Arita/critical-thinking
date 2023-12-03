@@ -4,11 +4,12 @@ import os
 
 # 環境変数からAPIキーを取得
 # APIキーの設定
-API_KEY = "apikey"
+API_KEY = "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"
 openai.api_key = API_KEY
 
 # Streamlitアプリの設定
 st.title('AIクリティカルシンキングアシスタント')
+st.write('セントラルクエスチョンとは"市場、競合の観点から見てA社はジェネリック市場に参入すべきか？"といった、答えを出すべき問いのことです。')
 
 # セッション内で使用するモデルが指定されていない場合のデフォルト値
 if "openai_model" not in st.session_state:
